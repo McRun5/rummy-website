@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Rummy Marroki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:        #0f0f1a;
+      --surface:   #1a1a2e;
+      --surface2:  #16213e;
+      --accent:    #ffd32a;
+      --accent2:   #ff6b35;
+      --red:       #ff4757;
+      --green:     #2ed573;
+      --blue:      #1e90ff;
+      --text:      rgba(255,255,255,.88);
+      --muted:     rgba(255,255,255,.5);
+      --border:    rgba(255,255,255,.08);
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      border-bottom: 3px solid var(--accent);
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content:'';
+      position:absolute; inset:0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,211,42,.05) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,211,42,.05) 40px);
+      pointer-events:none;
+    }
+    .suit-row { font-size:1.6rem; letter-spacing:.5em; margin-bottom:18px; }
+    .suit-row span:nth-child(odd)  { color:rgba(255,255,255,.6); }
+    .suit-row span:nth-child(even) { color:var(--red); opacity:.7; }
+
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 8px;
+    }
+    .header-sub { font-size:1.1rem; color:var(--muted); font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .updated-badge {
+      display:inline-block; margin-top:18px;
+      background:rgba(255,211,42,.12); border:1px solid rgba(255,211,42,.3);
+      border-radius:50px; padding:5px 18px;
+      font-size:.8rem; font-weight:800; color:var(--accent); letter-spacing:.1em; text-transform:uppercase;
+    }
+
+    main { max-width:860px; margin:0 auto; padding:60px 24px 80px; }
+
+    .summary-grid {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+      gap:14px; margin-bottom:56px;
+    }
+    .summary-pill {
+      background:var(--surface); border:2px solid var(--border);
+      border-radius:16px; padding:18px 16px; text-align:center;
+      transition:border-color .3s, transform .2s;
+    }
+    .summary-pill:hover { border-color:var(--pill-color); transform:translateY(-3px); }
+    .pill-icon  { font-size:1.8rem; display:block; margin-bottom:8px; }
+    .pill-label { font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--pill-color); }
+    .pill-value { font-size:.84rem; color:var(--muted); font-weight:600; margin-top:3px; }
+    .pill-yes  { --pill-color: var(--green); }
+    .pill-no   { --pill-color: var(--red); }
+    .pill-info { --pill-color: var(--blue); }
+
+    .section {
+      background:var(--surface); border:1px solid var(--border);
+      border-radius:20px; padding:36px 40px; margin-bottom:20px;
+      transition:border-color .3s;
+    }
+    .section:hover { border-color:rgba(255,255,255,.15); }
+    .section-header {
+      display:flex; align-items:center; gap:14px;
+      margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--border);
+    }
+    .section-num {
+      width:40px; height:40px; border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#0f0f1a; font-family:'Fredoka One',cursive; font-size:1.1rem;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .section h2 { font-family:'Fredoka One',cursive; font-size:1.3rem; color:#fff; }
+    .section p  { color:var(--text); font-size:.97rem; margin-bottom:10px; font-weight:600; }
+    .section p:last-child { margin-bottom:0; }
+
+    ul.policy-list { list-style:none; padding:0; margin:10px 0; }
+    ul.policy-list li {
+      padding:8px 0 8px 28px; position:relative;
+      font-size:.97rem; font-weight:600; color:var(--text);
+      border-bottom:1px solid rgba(255,255,255,.04);
+    }
+    ul.policy-list li:last-child { border-bottom:none; }
+    ul.policy-list li::before {
+      content:'◆'; position:absolute; left:0;
+      color:var(--accent); font-size:.55rem; top:13px;
+    }
+
+    .tag {
+      display:inline-block; padding:2px 10px; border-radius:50px;
+      font-size:.75rem; font-weight:800; text-transform:uppercase;
+      letter-spacing:.06em; margin-left:6px; vertical-align:middle;
+    }
+    .tag-yes  { background:rgba(46,213,115,.15); color:var(--green); border:1px solid rgba(46,213,115,.3); }
+    .tag-no   { background:rgba(255,71,87,.15);  color:var(--red);   border:1px solid rgba(255,71,87,.3); }
+
+    .highlight {
+      background:rgba(255,211,42,.07); border-left:3px solid var(--accent);
+      border-radius:0 10px 10px 0; padding:14px 18px; margin:14px 0;
+      font-style:italic; color:rgba(255,255,255,.8); font-size:.95rem; font-weight:600;
+    }
+
+    .applovin-card {
+      background:linear-gradient(135deg,rgba(30,144,255,.1),rgba(165,94,234,.1));
+      border:2px solid rgba(30,144,255,.25); border-radius:16px; padding:20px 24px; margin:16px 0;
+    }
+    .applovin-card strong { color:var(--blue); }
+    .applovin-card a { color:var(--blue); font-weight:700; }
+
+    .kids-card {
+      background:rgba(46,213,115,.06); border:2px solid rgba(46,213,115,.2);
+      border-radius:16px; padding:20px 24px; margin:16px 0;
+      display:flex; gap:14px; align-items:flex-start;
+    }
+    .kids-icon { font-size:2.2rem; flex-shrink:0; }
+    .kids-card p { margin:0; color:rgba(255,255,255,.8); }
+
+    .contact-section {
+      background:linear-gradient(135deg,var(--surface2),#0f3460);
+      border:2px solid rgba(255,211,42,.25); border-radius:20px;
+      padding:40px; text-align:center; margin-top:32px;
+    }
+    .contact-section h2 { font-family:'Fredoka One',cursive; font-size:1.6rem; color:var(--accent); margin-bottom:12px; }
+    .contact-section p  { color:var(--muted); font-size:.97rem; font-weight:600; margin-bottom:6px; }
+    .contact-email {
+      display:inline-block; margin-top:16px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#0f0f1a; font-family:'Fredoka One',cursive; font-size:1rem;
+      padding:14px 30px; border-radius:50px; text-decoration:none;
+      letter-spacing:.04em; transition:transform .2s, box-shadow .2s;
+      box-shadow:0 6px 24px rgba(255,211,42,.3);
+    }
+    .contact-email:hover { transform:translateY(-3px); box-shadow:0 10px 32px rgba(255,211,42,.45); }
+
+    footer {
+      background:#0a0a12; border-top:1px solid var(--border);
+      padding:32px 24px; text-align:center;
+    }
+    .footer-logo { font-family:'Fredoka One',cursive; font-size:1.6rem; background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; margin-bottom:10px; }
+    .footer-links { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:14px; }
+    .footer-links a { color:var(--muted); text-decoration:none; font-size:.88rem; font-weight:700; transition:color .2s; }
+    .footer-links a:hover { color:var(--accent); }
+    footer p { color:rgba(255,255,255,.2); font-size:.8rem; }
+
+    @media(max-width:600px) {
+      .section { padding:26px 20px; }
+      .contact-section { padding:28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="suit-row"><span>♠</span><span>♥</span><span>◆</span><span>♣</span></div>
+  <h1>🃏 Rummy Marroki</h1>
+  <div class="header-sub">Privacy Policy</div>
+  <div class="updated-badge">📅 Last updated: March 12, 2026</div>
+</header>
+
+<main>
+
+  <!-- Quick summary -->
+  <div class="summary-grid">
+    <div class="summary-pill pill-yes">
+      <span class="pill-icon">👤</span>
+      <div class="pill-label">Account Data</div>
+      <div class="pill-value">Name, email, photo</div>
+    </div>
+    <div class="summary-pill pill-no">
+      <span class="pill-icon">📊</span>
+      <div class="pill-label">Tracking</div>
+      <div class="pill-value">Not used</div>
+    </div>
+    <div class="summary-pill pill-no">
+      <span class="pill-icon">📧</span>
+      <div class="pill-label">Emails</div>
+      <div class="pill-value">We don't send any</div>
+    </div>
+    <div class="summary-pill pill-info">
+      <span class="pill-icon">📢</span>
+      <div class="pill-label">Ads</div>
+      <div class="pill-value">AppLovin network</div>
+    </div>
+    <div class="summary-pill pill-no">
+      <span class="pill-icon">💳</span>
+      <div class="pill-label">Payments</div>
+      <div class="pill-value">Free, no purchases</div>
+    </div>
+    <div class="summary-pill pill-no">
+      <span class="pill-icon">🧒</span>
+      <div class="pill-label">Under 13</div>
+      <div class="pill-value">Not collected</div>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">1</div><h2>Introduction</h2></div>
+    <p>Welcome to <strong>Rummy Marroki</strong>. This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile application, available on Google Play and the Apple App Store.</p>
+    <p>By downloading or using Rummy Marroki, you agree to the practices described in this policy. If you do not agree, please do not use the App.</p>
+    <div class="highlight">Rummy Marroki is a free-to-play card game. We do not charge for any products or services and do not facilitate real-money gambling of any kind.</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">2</div><h2>Information We Collect</h2></div>
+    <p>When you sign in using your Google account, we receive the following information from Google:</p>
+    <ul class="policy-list">
+      <li><strong>Display Name (Username)</strong> — shown as your in-game name <span class="tag tag-yes">Collected</span></li>
+      <li><strong>Email Address</strong> — used to create and manage your account <span class="tag tag-yes">Collected</span></li>
+      <li><strong>Google Profile Picture</strong> — displayed as your in-game avatar <span class="tag tag-yes">Collected</span></li>
+      <li><strong>Google User ID</strong> — used as your unique account identifier <span class="tag tag-yes">Collected</span></li>
+    </ul>
+    <p style="margin-top:14px;">We also collect limited technical data to operate the App:</p>
+    <ul class="policy-list">
+      <li>Device type and operating system version</li>
+      <li>App crash and error reports</li>
+      <li>In-game data: scores, virtual coin balance, game history</li>
+    </ul>
+    <p style="margin-top:14px;">We do <strong>not</strong> collect: location, contacts, camera, microphone, financial data, or any other sensitive information.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">3</div><h2>How We Use Your Information</h2></div>
+    <p>Your information is used solely to operate and improve the App:</p>
+    <ul class="policy-list">
+      <li>Create and manage your in-game player account</li>
+      <li>Display your name and avatar within the game</li>
+      <li>Save your game progress and virtual coin balance</li>
+      <li>Enable multiplayer features and friend connections</li>
+      <li>Fix bugs and improve app stability</li>
+      <li>Display advertisements through AppLovin (see Section 5)</li>
+    </ul>
+    <p style="margin-top:12px;">We do <strong>not</strong> sell, rent, or trade your personal information to any third party for marketing purposes.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">4</div><h2>No Tracking or Analytics</h2></div>
+    <p>We do <strong>not</strong> use any third-party tracking or analytics tools such as Firebase Analytics, Facebook Analytics, Mixpanel, or similar services.</p>
+    <p>We do <strong>not</strong> track your behavior across other apps or websites, and we do not build advertising profiles based on your activity outside of Rummy Marroki.</p>
+    <div class="highlight">Your in-app activity stays within Rummy Marroki and is never used to profile you across the web or other apps.</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">5</div><h2>Advertising — AppLovin</h2></div>
+    <p>Rummy Marroki displays ads provided by <strong>AppLovin</strong>, a third-party advertising network. AppLovin may collect and use certain data to serve ads in accordance with their own privacy policy.</p>
+    <div class="applovin-card">
+      <p><strong>AppLovin</strong> may collect: Advertising ID, IP address, and usage data to serve and measure ads.<br/>Their full privacy policy: <a href="https://www.applovin.com/privacy/" target="_blank">applovin.com/privacy</a></p>
+    </div>
+    <p>You may opt out of personalized ads at any time:</p>
+    <ul class="policy-list">
+      <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+      <li><strong>iOS 14+:</strong> Settings → Privacy & Security → Tracking → disable for Rummy Marroki</li>
+    </ul>
+    <p style="margin-top:12px;">We do not control the data AppLovin independently collects. Please review their policy for full details.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">6</div><h2>Communications — No Emails Sent</h2></div>
+    <p>We do <strong>not</strong> send marketing emails, newsletters, promotional messages, or any other unsolicited communications to users.</p>
+    <p>Your email address is collected solely for account identification purposes and is never used for outreach of any kind.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">7</div><h2>Payments & Virtual Currency</h2></div>
+    <p>Rummy Marroki is <strong>completely free to play</strong>. There are no in-app purchases, subscriptions, or paid features of any kind.</p>
+    <ul class="policy-list">
+      <li>Virtual coins have no real monetary value <span class="tag tag-no">Not real money</span></li>
+      <li>Virtual coins cannot be exchanged for cash or goods</li>
+      <li>We do not collect any payment or billing information</li>
+      <li>No credit card is ever requested</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">8</div><h2>Children's Privacy</h2></div>
+    <div class="kids-card">
+      <div class="kids-icon">🧒</div>
+      <p>Rummy Marroki is <strong>not directed at children under the age of 13</strong>. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us at <strong>makrane.abdelilah@gmail.com</strong> and we will delete that information immediately.</p>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">9</div><h2>Data Retention & Deletion</h2></div>
+    <p>We keep your account data for as long as you use the App. You may request deletion at any time by:</p>
+    <ul class="policy-list">
+      <li>Visiting our <a href="delete-data.html" style="color:var(--accent);font-weight:700;">Data Deletion page</a></li>
+      <li>Emailing <strong>makrane.abdelilah@gmail.com</strong> with subject "Data Deletion Request"</li>
+      <li>Revoking access via your Google account settings</li>
+    </ul>
+    <p style="margin-top:12px;">We will permanently delete all your data within <strong>30 days</strong> of a valid request and send you a confirmation.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">10</div><h2>Data Security</h2></div>
+    <p>We implement reasonable technical and organizational measures to protect your data from unauthorized access, alteration, or disclosure. Access to user data is strictly limited to what is necessary to run the App.</p>
+    <p>No method of internet transmission is 100% secure. We cannot guarantee absolute security but we take all reasonable precautions.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">11</div><h2>Your Rights</h2></div>
+    <ul class="policy-list">
+      <li><strong>Access</strong> — request a copy of the data we hold about you</li>
+      <li><strong>Correction</strong> — request correction of inaccurate data</li>
+      <li><strong>Deletion</strong> — request permanent deletion of your account and data</li>
+      <li><strong>Withdraw consent</strong> — revoke Google sign-in permissions at any time</li>
+      <li><strong>Opt out of personalized ads</strong> — via your device settings (see Section 5)</li>
+    </ul>
+    <p style="margin-top:12px;">To exercise any right, contact: <strong>makrane.abdelilah@gmail.com</strong></p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">12</div><h2>Third-Party Services</h2></div>
+    <p>Rummy Marroki uses the following third-party services, each with their own privacy policy:</p>
+    <ul class="policy-list">
+      <li><strong>Google Sign-In</strong> — <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--blue);">policies.google.com/privacy</a></li>
+      <li><strong>AppLovin (Advertising)</strong> — <a href="https://www.applovin.com/privacy/" target="_blank" style="color:var(--blue);">applovin.com/privacy</a></li>
+    </ul>
+    <p style="margin-top:12px;">We are not responsible for the privacy practices of these third-party services.</p>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <div class="section-header"><div class="section-num">13</div><h2>Changes to This Policy</h2></div>
+    <p>We may update this Privacy Policy periodically. Changes will be reflected by updating the "Last updated" date at the top of this page. We encourage you to review this page occasionally.</p>
+    <p>Continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-section">
+    <h2>📬 Questions?</h2>
+    <p>For any privacy-related questions or data requests, contact us at:</p>
+    <p style="margin-top:8px;"><strong>Rummy Marroki · Morocco</strong></p>
+    <a class="contact-email" href="mailto:makrane.abdelilah@gmail.com">✉ makrane.abdelilah@gmail.com</a>
+    <p style="margin-top:18px; font-size:.83rem; color:rgba(255,255,255,.3);">We respond to all privacy requests within 7 business days.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-logo">🃏 Rummy Marroki</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="delete-data.html">Delete My Data</a>
+    <a href="mailto:makrane.abdelilah@gmail.com">Contact</a>
+  </div>
+  <p>© 2026 Rummy Marroki · Free-to-play card game · Made with ❤️ in Morocco</p>
+</footer>
+
+</body>
+</html>
